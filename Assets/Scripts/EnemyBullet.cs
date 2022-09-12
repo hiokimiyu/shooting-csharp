@@ -12,10 +12,12 @@ public class EnemyBullet : MonoBehaviour
     float _bulletTime = 1.0f;
     [Tooltip("感覚のカウント")]
     float _bulletValue = 0;
+    [Tooltip("弾の速さ")]
+    [SerializeField] float _bulletSpeed = 0.5f;
     // Start is called before the first frame update
     void Start()
     {
-        _bulletTime = 0;
+        _bulletValue = 0;
     }
 
     // Update is called once per frame
@@ -23,8 +25,10 @@ public class EnemyBullet : MonoBehaviour
     {
         //弾を一秒ごとにする
         _bulletValue += Time.deltaTime;
-        if(_bulletValue > _bulletTime)
+        if (_bulletValue > _bulletTime)
         {
+            _bulletValue = 0;
+
             //自分の座標
             Vector3 _pos = gameObject.transform.position;
             //弾のプレハブの作成
@@ -32,9 +36,9 @@ public class EnemyBullet : MonoBehaviour
             //位置決め
             _bullet.transform.position = _pos;
             //プレイヤーに向かわせる（力を加える）
-            Vector2 _vec2 = _player.transform.position-_pos;
-            _bullet.GetComponent<Rigidbody2D>().velocity = _vec2;
-            _bulletTime = 0;
+            Vector2 _vec2 = _player.transform.position - _pos;
+            //_bullet.GetComponent<Rigidbody2D>().velocity = _vec2;
+            transform.Translate(_vec2 * _bulletSpeed);
         }
     }
 }
