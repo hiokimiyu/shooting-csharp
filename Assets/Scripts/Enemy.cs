@@ -32,6 +32,7 @@ public class Enemy : MonoBehaviour
         _bulletValue += Time.deltaTime;
         if(_bulletValue > _bulletTime)
         {
+            Debug.Log("1");
             Instantiate(_enemyBullet, _muzzle.position, Quaternion.identity);
             _bulletValue = 0;
         }

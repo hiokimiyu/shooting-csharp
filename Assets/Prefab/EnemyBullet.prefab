@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6611287681908225230}
   - component: {fileID: 4330854819667677096}
   - component: {fileID: 820801809}
+  - component: {fileID: 1387944922}
   m_Layer: 0
   m_Name: EnemyBullet
   m_TagString: Enemytama
@@ -142,7 +143,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8222763041911172134}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: be3f7d24982f63e439ab2d852be6f207, type: 3}
   m_Name: 
@@ -163,3 +164,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _score: -5
   _recoverLife: -15
+--- !u!114 &1387944922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8222763041911172134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4cd95dbaf055f54980a21b96ac806ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _player: {fileID: 0}
+  _enemyBullet: {fileID: 8222763041911172134}

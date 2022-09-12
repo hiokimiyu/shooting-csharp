@@ -1551,6 +1551,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1387944922, guid: 4372430f8ff4d504ca5483dbafe497a4, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 70054349}
     - target: {fileID: 8222763041911172134, guid: 4372430f8ff4d504ca5483dbafe497a4, type: 3}
       propertyPath: m_Name
       value: EnemyBullet
